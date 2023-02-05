@@ -9,35 +9,38 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div class="calc-con justify-center mt-80">
+    <div class="calc-con justify-center mt-60">
         <div class="cal-body flex justify-center flex-col">
             <div class="top flex justify-center ml-6 mb-4">
-                <div class="last-num"></div>
-                <div class="result border-2 w-36 flex justify-end pt-3 border-white text-white pr-2 rounded-lg">0</div>
-                <button class="clear border-2 border-red-500 w-10 ml-3 flex justify-center items-center hover:bg-red-600 font-bold text-white rounded-2xl">AC</button>
+
+            <div class="num-border border-2 w-36 flex justify-end pt-3 border-white text-white pr-2 rounded-lg items-end">
+                <div class="pre-num pr-4 text-xs mb-1"></div>
+                <div class="result flex justify-end text-3xl">0</div>
+            </div>
+                <button onclick="clear()" class="clear border-2 border-red-500 w-10 ml-3 flex justify-center items-center hover:bg-red-600 font-bold text-white rounded-2xl">AC</button>
             </div>
             <div class="sec-top flex justify-center">
-                <button class="seven border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">7</button>
-                <button class="eight border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">8</button>
-                <button class="nine border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">9</button>
-                <button class="divide border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">/</button>
+                <button class="seven numbers border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">7</button>
+                <button class="eight numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">8</button>
+                <button class="nine numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">9</button>
+                <button class="divide operators border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">/</button>
             </div>
             <div class="third-top flex justify-center mt-4">
-                <button class="four border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">4</button>
-                <button class="five border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">5</button>
-                <button class="six border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">6</button>
-                <button class="multiply border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">*</button>
+                <button class="four numbers border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">4</button>
+                <button class="five numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">5</button>
+                <button class="six numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">6</button>
+                <button class="multiply operators border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">x</button>
             </div>
             <div class="fourth-top flex justify-center mt-4">
-                <button class="one border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">1</button>
-                <button class="two border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">2</button>
-                <button class="three border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">3</button>
-                <button class="minus border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">-</button>
+                <button class="one numbers border-2 border-blue-500 w-10 ml-6 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">1</button>
+                <button class="two numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">2</button>
+                <button class="three numbers border-2 border-blue-500 w-10 ml-3 flex justify-center items-center hover:bg-blue-600 font-bold p-1 text-white rounded-2xl">3</button>
+                <button class="minus operators border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">-</button>
             </div>
             <div class="fifth-top flex justify-center mt-4">
-                <button class="plus border-2 border-purple-500 w-13 ml-6 flex justify-center items-center hover:bg-purple-600 font-bold p-1 text-white pl-7 pr-7 rounded-2xl">0</button>
-                <button class="plus border-2 border-purple-500 w-13 ml-3 flex justify-center items-center hover:bg-purple-600 font-bold p-1 text-white pl-7 pr-7 rounded-2xl">.</button>
-                <button class="plus border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">+</button>
+                <button class="zero numbers border-2 border-purple-500 w-13 ml-6 flex justify-center items-center hover:bg-purple-600 font-bold p-1 text-white pl-7 pr-7 rounded-2xl">0</button>
+                <button class="decimal border-2 border-purple-500 w-13 ml-3 flex justify-center items-center hover:bg-purple-600 font-bold p-1 text-white pl-7 pr-7 rounded-2xl">.</button>
+                <button class="plus operators border-2 border-green-500 w-10 ml-3 flex justify-center items-center hover:bg-green-600 font-bold p-1 text-white rounded-2xl">+</button>
             </div>
             <div class="sixth-top flex justify-center mt-4">
             <button class="equals border-2 border-yellow-500 w-48 ml-6 flex justify-center items-center hover:bg-yellow-600 font-bold p-1 text-white h-12 text-xl rounded-2xl">=</button>
